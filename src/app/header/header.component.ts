@@ -9,6 +9,7 @@ export class HeaderComponent implements OnInit {
 
   sitename = 'Hello World';
   sitelink = 'http://www.google.com';
+  counter = 0;
 
   constructor() { }
 
@@ -26,6 +27,7 @@ export class HeaderComponent implements OnInit {
   }
 
   changeTitle($event: MouseEvent) {
+    this.counter++;
     console.log($event);
     if ($event.ctrlKey) {
       this.sitename = 'New Angular Title';
