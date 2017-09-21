@@ -25,7 +25,7 @@ export class HeaderComponent implements OnInit {
 
   }
 
-  changeTitle($event) {
+  changeTitle($event: MouseEvent) {
     console.log($event);
     if ($event.ctrlKey) {
       this.sitename = 'New Angular Title';
