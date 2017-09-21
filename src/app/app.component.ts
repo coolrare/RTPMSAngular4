@@ -13,7 +13,7 @@ export class AppComponent {
       this.keyword = '';
     }
   }
-  setKeyword(str) {
-    this.keyword = str;
+  doSearch(str) {
+    // this.keyword
   }
 }
