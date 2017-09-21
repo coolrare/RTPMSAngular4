@@ -25,4 +25,11 @@ export class HeaderComponent implements OnInit {
 
   }
 
+  changeTitle($event) {
+    console.log($event);
+    if ($event.ctrlKey) {
+      this.sitename = 'New Angular Title';
+    }
+  }
+
 }
