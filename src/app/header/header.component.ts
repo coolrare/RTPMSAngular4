@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  sitename = 'Hello World';
+  sitelink = 'http://www.google.com';
+
   constructor() { }
 
   ngOnInit() {
+    setTimeout(() => {
+      this.sitename = 'The Will Will Web';
+    }, 3000);
   }
 
 }
