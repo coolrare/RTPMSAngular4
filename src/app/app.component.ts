@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  keyword = '123';
+  clearKeyword($event: KeyboardEvent) {
+    if ($event.keyCode == 27) {
+      this.keyword = '';
+    }
+  }
+  setKeyword(str) {
+    this.keyword = str;
+  }
 }
