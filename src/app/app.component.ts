@@ -16,7 +16,10 @@ export class AppComponent {
   doSearch(str) {
     // this.keyword
   }
-
+  doDelete(item) {
+    let idx = this.data.indexOf(item);
+    this.data.splice(idx, 1);
+  }
   data = [
     {
       "id": 1,

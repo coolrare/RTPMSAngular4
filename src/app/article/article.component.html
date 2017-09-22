@@ -12,6 +12,7 @@
                 <a [href]="item['category-link']">{{ item.author }}</a>
               </span>
       <span class="post-category"><i class="glyphicon glyphicon-folder-close"></i><a href="http://blog.miniasp.com/category/Visual-Studio.aspx">Visual Studio</a></span>
+      <button (click)="doDelete()">刪除</button>
     </div>
   </header>
   <section class="post-body text" [innerHTML]="item.summary">
