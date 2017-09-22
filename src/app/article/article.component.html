@@ -1,12 +1,12 @@
 <article class="post" id="post0">
   <header class="post-header">
     <h2 class="post-title">
-      <a [href]="item.href">{{ item.title }}</a>
+      <a [href]="item.href">{{ item.title | uppercase }}</a>
     </h2>
     <div class="post-info clearfix">
       <span class="post-date">
                 <i class="glyphicon glyphicon-calendar"></i>
-                {{ item.date }}
+                {{ item.date | date:'yyyy-MM-dd' }}
               </span>
       <span class="post-author"><i class="glyphicon glyphicon-user"></i>
                 <a [href]="item['category-link']">{{ item.author }}</a>
@@ -17,4 +17,5 @@
   </header>
   <section class="post-body text" [innerHTML]="item.summary">
   </section>
+  <pre>NT${{ 9827398523984534 | number }}</pre>
 </article>
