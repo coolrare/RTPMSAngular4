@@ -8,27 +8,7 @@
       <div id="ctl00_cphBody_divError"></div>
       <div id="ctl00_cphBody_PostList1_posts" class="posts">
 
-        <!-- Article START-->
-        <article class="post" id="post0" *ngFor="let item of data">
-          <header class="post-header">
-            <h2 class="post-title">
-              <a [href]="item.href">{{ item.title }}</a>
-            </h2>
-            <div class="post-info clearfix">
-              <span class="post-date">
-                <i class="glyphicon glyphicon-calendar"></i>
-                {{ item.date }}
-              </span>
-              <span class="post-author"><i class="glyphicon glyphicon-user"></i>
-                <a [href]="item['category-link']">{{ item.author }}</a>
-              </span>
-              <span class="post-category"><i class="glyphicon glyphicon-folder-close"></i><a href="http://blog.miniasp.com/category/Visual-Studio.aspx">Visual Studio</a></span>
-            </div>
-          </header>
-          <section class="post-body text" [innerHTML]="item.summary">
-          </section>
-        </article>
-        <!-- Article END-->
+        <app-article *ngFor="let item of data" [item]="item"></app-article>
 
       </div>
     </section>
@@ -44,8 +24,7 @@
             <div id="searchbox">
               <input type="text" placeholder="請輸入搜尋關鍵字" accesskey="s"
                 [(ngModel)]="keyword" (keyup)="clearKeyword($event)">
-              <input type="button" value="搜尋" id="searchbutton"
-                (click)="doSearch()">
+              <input type="button" value="搜尋" id="searchbutton">
               {{ keyword }}
             </div>
           </div>
@@ -61,7 +40,7 @@
           <div class="widget-content">
             <div style="text-align: center">
               <div id="calendarContainer">
-                <table class="calendar" summary="" style=";border-collapse:collapse;">
+                <table class="calendar" summary="" style="border-collapse:collapse;">
                   <tbody>
                     <tr>
                       <td><a href="#">&lt;&lt;</a>&nbsp;&nbsp;</td>
